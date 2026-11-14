@@ -24,15 +24,15 @@ The Lab 1 testbed consists of three functional tiers simulating an end-to-end Io
 
 ## 3. Section 8: Baseline Findings Table (Evidence)
 
-| # | Finding | Evidence File / Source | MTSFB Threat / Weakness | Fixed in |
+| # | Finding | Evidence / Screenshot Link | MTSFB Threat / Weakness | Fixed In |
 |---|---|---|---|---|
-| **F1** | Broker accepts anonymous clients; anyone can read all topics. | Terminal screenshot (`mosquitto_sub -t "#"`) | T-Sec-3 / R-Sec-5 (Unauthorized access) | Lab 3 |
-| **F2** | Telemetry sent in plaintext; payload readable in Wireshark. | `lab1_plain_mqtt.pcapng` & Packet details view | T-Sec-4 / R-Sec-3 (Insecure communication) | Lab 3 |
-| **F3** | Anyone can inject fake sensor readings via MQTT topics. | Terminal injection + Mobius `/la` verification | T-Sec-3 / Message Injection | Lab 3, Lab 5 |
-| **F4** | CSE trusts any `X-M2M-Origin` header without verification. | `curl` command response returning `2001 Created` with `cr: Chacker` | T-Sec-5 / Weak Access Control | Lab 5 |
-| **F5** | Open ports and services exposed on the gateway/server. | `nmap_scan.txt` output (ports 1883, 7579 open) | Network Exposure / Unnecessary Services | Lab 4 |
-| **F6** | Hardcoded credentials and connection parameters in source code. | Code snippet screenshot (`sensor_sim.py` / `bridge.py`) | Information Disclosure / Insecure Storage | Lab 3 |
-| **F7** | PIN authentication lacks rate limiting or brute-force protection. | Design evaluation / RTM correlation (`SR-03`) | Brute-Force Attack / Weak Authentication | Project Implementation |
+| **F1** | Broker accepts anonymous clients; anyone can read all topics | ![F1 Evidence](../findings%20table/F1.png) | T-Sec-3 / R-Sec-5 | Lab 3 |
+| **F2** | Telemetry sent in plaintext; payload readable in Wireshark | ![F2 Evidence](../findings%20table/lab1_plain_mqtt.png) | T-Sec-4 / R-Sec-3 | Lab 3 |
+| **F3** | Anyone can inject fake sensor readings | ![F3 Evidence](../findings%20table/F3.png) | Unauthorized access / Message injection | Lab 3, Lab 5 |
+| **F4** | CSE trusts any X-M2M-Origin value | ![F4 Evidence](../findings%20table/F4.png) | Unauthorized access / Weak authentication | Lab 5 |
+| **F5** | Open ports and services on gateway/server | ![F5 Evidence](../findings%20table/F5.png) | Network exposure / Unnecessary services | Lab 4 |
+| **F6** | Hardcoded Wi-Fi and device credentials in source code | ![F6 Evidence](../findings%20table/F6.png) | Information disclosure / Insecure credential storage | Lab 3 |
+| **F7** | PIN authentication allows repeated incorrect attempts without protection | *Refer to test logs* | Brute-force attack / Weak authentication | Project implementation |
 
 ---
 
