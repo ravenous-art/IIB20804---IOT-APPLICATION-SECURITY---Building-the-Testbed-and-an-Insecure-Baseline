@@ -27,7 +27,7 @@ The Lab 1 testbed consists of three functional tiers simulating an end-to-end Io
 | # | Finding | Evidence / Screenshot Link | MTSFB Threat / Weakness | Fixed In |
 |---|---|---|---|---|
 | **F1** | Broker accepts anonymous clients; anyone can read all topics | ![F1 Evidence](../findings%20table/F1.png) | T-Sec-3 / R-Sec-5 | Lab 3 |
-| **F2** | Telemetry sent in plaintext; payload readable in Wireshark | ![F2 Evidence](../findings%20table/lab1_plain_mqtt.png) | T-Sec-4 / R-Sec-3 | Lab 3 |
+| **F2** | Telemetry sent in plaintext; payload readable in Wireshark | ![F2 Evidence](../findings%20table/F2.png) | T-Sec-4 / R-Sec-3 | Lab 3 |
 | **F3** | Anyone can inject fake sensor readings | ![F3 Evidence](../findings%20table/F3.png) | Unauthorized access / Message injection | Lab 3, Lab 5 |
 | **F4** | CSE trusts any X-M2M-Origin value | ![F4 Evidence](../findings%20table/F4.png) | Unauthorized access / Weak authentication | Lab 5 |
 | **F5** | Open ports and services on gateway/server | ![F5 Evidence](../findings%20table/F5.png) | Network exposure / Unnecessary services | Lab 4 |
