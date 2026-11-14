@@ -1,0 +1,11 @@
+Starting Nmap 7.993 ( https://nmap.org ) at 2026-11-14 15:22 +0800
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+Other addresses for localhost (not scanned): ::1
+
+PORT     STATE SERVICE                 VERSION
+1883/tcp open  mosquitto version 2.1.2
+7579/tcp open  unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 18.68 seconds
